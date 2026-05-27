@@ -246,6 +246,61 @@
 
     .feature-card p { font-size: 0.85rem; color: var(--muted); line-height: 1.6; }
 
+    /* YOUTUBE CARD */
+    .youtube-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      transition: border-color 0.2s, transform 0.2s;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .youtube-card:hover {
+      border-color: #ff0000;
+      transform: translateY(-3px);
+    }
+
+    .youtube-card-label {
+      padding: 1rem 1.5rem 0.6rem;
+    }
+
+    .youtube-card-label .feature-icon { font-size: 2rem; margin-bottom: 0.8rem; }
+
+    .youtube-card-label h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.3rem;
+      letter-spacing: 0.03em;
+    }
+
+    .youtube-card-label p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 0.8rem;
+    }
+
+    .youtube-embed-wrap {
+      position: relative;
+      width: 100%;
+      /* 9:16 aspect ratio for a YouTube Short */
+      padding-bottom: 177.78%;
+      background: #000;
+      flex: 1;
+    }
+
+    .youtube-embed-wrap iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
     /* SPECS */
     .specs-section { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
 
@@ -371,7 +426,7 @@
   <header>
     <div class="header-inner">
       <div class="brand">
-<div class="brand-text">
+        <div class="brand-text">
           <h1>Hotspot-Face</h1>
           <p>Professional MMDVM Monitor — by M3URE</p>
         </div>
@@ -448,6 +503,24 @@
           <h3>Plug &amp; Play</h3>
           <p>Pre-configured and ready to use. Simply power on, connect to your network, and start monitoring your DMR activity.</p>
         </div>
+
+        <!-- YOUTUBE CARD -->
+        <div class="youtube-card">
+          <div class="youtube-card-label">
+            <div class="feature-icon">▶️</div>
+            <h3>See It In Action</h3>
+            <p>Watch Hotspot-Face doing what it does best — live DMR monitoring on your desk or in your vehicle.</p>
+          </div>
+          <div class="youtube-embed-wrap">
+            <iframe
+              src="https://www.youtube.com/embed/iN3uEBvdEDs"
+              title="Hotspot-Face in action"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+
       </div>
     </div>
   </section>
